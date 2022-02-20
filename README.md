@@ -18,7 +18,7 @@ When the build script is run, every SVG icon in the `src` directory will:
 
 2. The icon will be optimized and copied to the `./optimized` directory.
 
-3. The icon will be transformed into a React component with it's name being a PascalCase version of the SVG file name. For example, an icon named `foo-bar` will be turned into a component named `FooBar`.
+3. The icon will be transformed into a React component with it's name being a PascalCase version of the SVG file name and the word Icon added at the end. For example, an icon named `foo-bar` will be turned into a component named `FooBarIcon`.
 
 4. Each icon will be exported from the `./solid/index.tsx` or `./outline/index.tsx` files. This means that the icons can be imported individually or in groups from their solid or outline directories.
 
@@ -28,7 +28,7 @@ To add an icon to the icon library:
 
 1. Get the SVG code for your icon and figure out which directory the icon belongs in. If the icon has a fill, it should go in the `./src/solid` directory. Otherwise, if it has only a stroke or outline, it should go in the `./src/outline` directory.
 
-2. Create a file for your icon in the directory that it belongs to. Make sure you name the file with the snake case version of the name you want your React component to have. For example, an icon named `foo-bar` will be turned into a component named `FooBar`. Paste your icon SVG code into this file.
+2. Create a file for your icon in the directory that it belongs to. Make sure you name the file with the kebab case version of the name you want your React component to have. For example, an icon named `foo-bar` will be turned into a component named `FooBarIcon`. Make sure that you don't add the word "icon" to the name of your svg file as the build scripts adds it to the component name automatically.
 
 3. Run the build command with `npm run build`. This will optimize the icons, add/remove certain attributes, and create the React components from the icons. It will also add the icons to the `index.tsx` file that corresponds to that style.
 
