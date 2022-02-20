@@ -1,6 +1,6 @@
 # React Icon Library Template
 
-A template for creating an icon library for your application. This template is heavily based on [https://github.com/tailwindlabs/heroicons](heroicons) and you should check it out to see if those icons can help you out.
+A template for creating an icon library for your application. This template is heavily based on [heroicons](https://github.com/tailwindlabs/heroicons) and you should check it out to see if those icons can help you out.
 
 **Table of Contents**
 
