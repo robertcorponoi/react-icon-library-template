@@ -1,0 +1,33 @@
+# The events on GitHub that will cause the workflow to be executed.
+on: [pull_request]
+
+# The name of the workflow to be displayed on the repository's actions page.
+name: CI
+
+# A list of the jobs that will run during the workflow. Each job runs 
+# independently of the others and on different virtual environments.
+# We have a single job, which:
+# 1. Runs `npm ci` to install the dependencies in the icon library.
+# 2. Runs `npm run build` to build the icon library.
+# 3. Runs `npm test` to run the tests.
+jobs:
+    build-and-test:
+        name: Build and Test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            # GitHub action for Node.JS.
+            # https://github.com/actions/setup-node
+            - uses: actions/setup-node@v2
+              with:
+                node-version: '16.13.2'
+                check-latest: true
+            # Run `npm ci` in the icon library.
+            - name: Install dependencies
+              run: npm ci
+            # Next build the icon library.
+            - name: Build the icon library
+              run: npm run build
+            # Lastly, run the tests.
+            - name: Run tests
+              run: npm test

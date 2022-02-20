@@ -1,0 +1,37 @@
+{
+    // Specifies an array of filenames or patterns to include in the program. 
+    // These filenames are resolved relative to the directory containing the 
+    // `tsconfig.json` file.
+    // https://www.typescriptlang.org/tsconfig#include
+    "include": [
+        "scripts/**/*"
+    ],
+    "compilerOptions": {
+        // Sets the module system for the program.
+        // https://www.typescriptlang.org/tsconfig#module
+        "module": "CommonJS",
+        // The `target` setting changes which JS features are downleveled and 
+        // which are left intact. For example, an arrow function `() => this` 
+        // will be turned into an equivalent `function` expression if target 
+        // is ES5 or lower.
+        // https://www.typescriptlang.org/tsconfig#target
+        "target": "ES2020",
+        // The directory where the `.js` files will be emitted to. The 
+        // directory structure of the original source files is preserved.
+        // If not specified, `.js` files will be emitted into the same 
+        // directory as the `.ts` files they were generated from.
+        // https://www.typescriptlang.org/tsconfig#outDir
+        "outDir": "./dist",
+        // Specifies the module resolution strategy.
+        // `node` for Node.JS' CommonJS implementation.
+        // https://www.typescriptlang.org/tsconfig#moduleResolution
+        "moduleResolution": "node",
+        // Fixes issues with namespace and default imports.
+        // https://www.typescriptlang.org/tsconfig#esModuleInterop
+        "esModuleInterop": true,
+        // Controls how JSX constructs are emitted in JavaScript files. This 
+        // only affects output of JS files that started in `.tsx` files.
+        // https://www.typescriptlang.org/tsconfig#jsx
+        "jsx": "react",
+    }
+}
