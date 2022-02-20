@@ -8,6 +8,7 @@ A template for creating an icon library for your application. This template is h
 - [Adding Icons](#adding-icons)
 - [Tests](#tests)
 - [GitHub Actions](#github-actions)
+- [Keeping Up To Date With Template Changes](#keeping-up-to-date-with-template-changes)
 - [License](#license)
 
 ## How It Works
@@ -55,6 +56,28 @@ You can run the tests using `npm test` which will build the icon library and run
 The workflow at `.github/workflows/build.yml` will run whenever a pull request is made.
 
 This action will install dependencies, run a build of the icon library, and run the available tests.
+
+## Keeping Up To Date With Template Changes
+
+This template will be updated when dependencies need updating, new packages are added, and new or better concepts are found. To keep up with changes you might want from the template:
+
+1. Add the template repository as a remote:
+
+```sh
+git remote add template git@github.com:robertcorponoi/react-icon-library-template.git
+```
+
+2. Fetch the changes:
+
+```sh
+git fetch --all
+```
+
+3. Merge the changes from the main branch of the template repository:
+
+```sh
+git merge template/main
+```
 
 ## License
 
