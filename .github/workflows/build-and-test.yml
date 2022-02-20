@@ -2,7 +2,7 @@
 on: [pull_request]
 
 # The name of the workflow to be displayed on the repository's actions page.
-name: CI
+name: Build and Test
 
 # A list of the jobs that will run during the workflow. Each job runs 
 # independently of the others and on different virtual environments.
